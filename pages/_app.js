@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <button onClick={toggleTheme}>Switch Theme</button>
+      {/* <button onClick={toggleTheme}>Switch Theme</button> */}
       <Component {...pageProps} />
     </ThemeProvider>
   );

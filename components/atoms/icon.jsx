@@ -5,28 +5,11 @@ import Github from "../../public/images/github.svg";
 /**
  * Primary UI component for user interaction
  */
-export const Icon = ({
-  imageFile,
-  primary,
-  backgroundColor,
-  size,
-
-  ...props
-}) => {
-  const mode = primary ? "blue" : "red";
-  const padding =
-    size === "small"
-      ? "text-xs py-1 px-2"
-      : size === "medium"
-      ? "text-base py-2 px-4"
-      : "text-2xl py-4 px-8";
-
+export const Icon = ({ imageFile }) => {
   return (
     <div
       type="icon"
-      className={`h-32 w-32 flex p-5 bg-gray-300 rounded-lg shadow-xl hover:bg-indigo-300 cursor-pointer`}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
+      className={`h-24 w-24 flex p-5 bg-gray-300 rounded-lg shadow-xl hover:bg-indigo-300 cursor-pointer  transition duration-300 ease-in-out `}
     >
       <img src={imageFile}></img>
     </div>

@@ -8,6 +8,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        "profile-image": "url('/images/profile.jpg')",
+      }),
       fontFamily: {
         MyFont: ["Poppins", "sans-serif"],
       },

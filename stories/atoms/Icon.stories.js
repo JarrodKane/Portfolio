@@ -13,12 +13,7 @@ export default {
 const Template = (args) => <Icon {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  imageFile: "../assets/github.svg",
-  primary: true,
-  size: "medium",
-  label: "Button",
-};
+Primary.args = {};
 
 // export const Secondary = Template.bind({});
 // Secondary.args = {

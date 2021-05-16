@@ -3,15 +3,14 @@ import React from "react";
 import { Headings } from "../atoms/headings";
 import { Text } from "../atoms/text";
 
-const TextBox = ({
-  imageFile,
+const Textbox = ({
   primary,
   backgroundColor,
   size,
 
   children,
 }) => {
-  return <div className={`w-8/12 `}>{children}</div>;
+  return <div className={`w-full  p-4`}>{children}</div>;
 };
 
-export default TextBox;
+export default Textbox;
