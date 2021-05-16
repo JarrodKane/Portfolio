@@ -1,39 +1,35 @@
 import React from "react";
 
-import { Icon } from "../../components/atoms/icon";
+import ProfileImage from "../../components/molecules/profileImage";
 
 export default {
-  title: "Design System/Atoms/Icon",
-  component: Icon,
+  title: "Design System/Molecules/ProfileImage",
+  component: ProfileImage,
   argTypes: {
     backgroundColor: { control: "color" },
   },
 };
 
-const Template = (args) => <Icon {...args} />;
+const Template = (args) => <ProfileImage {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   imageFile: "../assets/github.svg",
   primary: true,
   size: "medium",
-  label: "Button",
 };
 
 // export const Secondary = Template.bind({});
 // Secondary.args = {
 //   size: "medium",
-//   label: "Button",
 // };
 
 // export const Large = Template.bind({});
 // Large.args = {
 //   size: "large",
-//   label: "Button",
 // };
 
 // export const Small = Template.bind({});
 // Small.args = {
 //   size: "small",
-//   label: "Button",
 // };

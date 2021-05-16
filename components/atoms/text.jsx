@@ -1,39 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Github from "../../public/images/github.svg";
 
-/**
- * Primary UI component for user interaction
- */
-export const Icon = ({
+export const Text = ({
   imageFile,
   primary,
   backgroundColor,
-  size,
+  type,
+  children,
 
   ...props
 }) => {
   const mode = primary ? "blue" : "red";
-  const padding =
-    size === "small"
-      ? "text-xs py-1 px-2"
-      : size === "medium"
-      ? "text-base py-2 px-4"
-      : "text-2xl py-4 px-8";
+
+  switch (type) {
+    case "p":
+      family = "text-xs py-1 px-2";
+      break;
+    case "h1":
+      family = "text-base py-2 px-4";
+      break;
+
+    default:
+      break;
+  }
 
   return (
     <div
-      type="icon"
+      type="text"
       className={`h-32 w-32 flex p-5 bg-gray-300 rounded-lg shadow-xl hover:bg-indigo-300 cursor-pointer`}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
-      <img src={imageFile}></img>
+      {...children}
     </div>
   );
 };
 
-Icon.propTypes = {
+Text.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
