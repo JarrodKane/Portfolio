@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/templates/layout";
+import { Icon } from "../components/atoms/icon";
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
           <title>Create Next App</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="testing">asdsad</div>
+        <div className="testing">
+          <Icon />
+        </div>
 
         <main>TEST</main>
       </div>
