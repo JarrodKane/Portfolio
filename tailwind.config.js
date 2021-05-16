@@ -7,7 +7,11 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        MyFont: ["Poppins", "sans-serif"],
+      },
+    },
   },
   variants: {
     extend: {},
