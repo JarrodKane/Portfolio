@@ -14,6 +14,13 @@
 
 @font-face {
   font-family: "Poppins";
+  src: url("/fontsPoppins-Black.ttf");
+  font-style: black;
+  weight: 900;
+}
+
+@font-face {
+  font-family: "Poppins";
   src: url("/fonts/Poppins-Thin.ttf");
   font-style: thin;
   weight: 100;

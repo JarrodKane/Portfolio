@@ -6,26 +6,40 @@ import Textbox from "../components/molecules/textbox";
 import { Text } from "../components/atoms/text";
 import Row from "../components/molecules/row";
 
+import Project from "../components/organisims/project";
+
 export default function Home() {
   return (
     <DefaultPage>
       <ProfileImage />
-      <Textbox>
-        <Text
-          text=" I’m a developer from Melbourne Australia. I focus on technologies such
+      <Textbox
+        text=" I’m a developer from Melbourne Australia. I focus on technologies such
           as React, Next.js, Node, etc"
-        ></Text>
-        <Row>
-          <Icon imageFile="/images/github.svg" primary={true} />
-          <Icon imageFile="/images/linkedin.svg" />
-        </Row>
-      </Textbox>
-
-      <div>Project section</div>
-      <div>Contact Section</div>
+      />
+      <Row>
+        <Icon imageFile="/images/github.svg" primary={true} />
+        <Icon imageFile="/images/linkedin.svg" />
+      </Row>
+      <div
+        className={`flex flex-col content-center justify-self-center items-center `}
+      >
+        <Project
+          title="Test project"
+          text="test Text for the project to display"
+          imageRef="test.jpg"
+        />
+        <Project
+          title="Test 2"
+          text="test Text for the project to display"
+          imageRef="test.jpg"
+        />
+        <Project
+          title="Test 3"
+          text="test Text for the project to display"
+          imageRef="test.jpg"
+        />
+      </div>
+      <div>Footer</div>
     </DefaultPage>
   );
 }
-// primary: true,
-// size: "medium",
-// label: "Button",

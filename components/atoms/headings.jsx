@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Headings = ({ type, primary, text, weight }) => {
+export const Headings = ({ type, primary, text, weight, props }) => {
   const mode = primary ? "blue" : "red";
 
   let styling = "";
@@ -23,21 +23,21 @@ export const Headings = ({ type, primary, text, weight }) => {
   switch (type) {
     case "h1":
       return (
-        <h1 type="text" className={`${styling}  font-${weight}`}>
+        <h1 type="text" className={`${styling}  font-${weight} ${props}`}>
           {text}
         </h1>
       );
       break;
     case "h2":
       return (
-        <h2 type="text" className={`${styling}  font-${weight}`}>
+        <h2 type="text" className={`${styling}  font-${weight} ${props}`}>
           {text}
         </h2>
       );
       break;
     case "h3":
       return (
-        <h3 type="text" className={`${styling}  font-${weight}`}>
+        <h3 type="text" className={`${styling}  font-${weight} ${props}`}>
           {text}
         </h3>
       );

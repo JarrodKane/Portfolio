@@ -4,13 +4,20 @@ import { Headings } from "../atoms/headings";
 import { Text } from "../atoms/text";
 
 const Textbox = ({
+  heading,
+  text,
   primary,
   backgroundColor,
   size,
 
   children,
 }) => {
-  return <div className={`w-full  p-4`}>{children}</div>;
+  return (
+    <div className={`w-full  p-4`}>
+      {heading ? <Headings /> : null}
+      {text ? <Text /> : null}
+    </div>
+  );
 };
 
 export default Textbox;

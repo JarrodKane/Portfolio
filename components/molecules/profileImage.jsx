@@ -16,7 +16,11 @@ function ProfileImage({
       className={`w-10/12 h-52 bg-profile-image bg-cover bg-center  rounded-r-lg shadow-xl  flex items-end mt-12 mb-4`}
       {...props}
     >
-      <Headings type="h1" text="Jarrod Kane" />
+      <Headings
+        type="h1"
+        text="Jarrod Kane"
+        props={`text-gray-50 font-black `}
+      />
     </div>
   );
 }
