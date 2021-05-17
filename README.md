@@ -16,18 +16,28 @@ This is using:
 
 ---
 
+## TO RUN:
+
+- Have nodejs installed, version 14.17.0 was used
+- NPM installed
+- git clone the repo
+- Cd into the project
+- `npm i` to install all the modules
+- `npm run dev` to run the nextjs project
+
 ## TODO:
+
+- [x] Create readme
 
 ### Features
 
 - [x] Storybook
-- [ ] Netlify CMS
+- [ ] CMS (Contentful)
 - [ ] Dark/Light theme
 - [ ] RSS Feed
 
 ### Pages/Content
 
-- [x] Create readme
 - [ ] Home
 - [ ] Podcast
 - [ ] Youtube
