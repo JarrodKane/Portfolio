@@ -4,7 +4,7 @@ import { color_background } from "../../constants/colors";
 
 export default function DefaultPage({ children }) {
   return (
-    <div className={`bg-gray-50 h-full`}>
+    <div className={`bg-gray-50 h-full pt-8`}>
       <Navigation />
       <div>{children}</div>
     </div>

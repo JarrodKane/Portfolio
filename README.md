@@ -2,6 +2,9 @@
 
 Objective of this project is to use Next.js to create my own portfolio.
 The Home page is meant to hold multiple sections, and the only other pages are Blog/Twitch/Youtube.
+Blog pages will be populated by contentful.
+
+The main reason behind this project is to try and use Tailwindcss.
 
 The basic design for this site is made in [Figma](https://www.figma.com/file/wLqVYuYcdFWoMFCHxxqA1c/JarrodKane?node-id=1%3A982).
 The structure of this project is using atomic design.
@@ -28,6 +31,8 @@ This is using:
 ## TODO:
 
 - [x] Create readme
+- [ ] Mobile view
+- [ ] Desktop view
 
 ### Features
 
@@ -39,6 +44,7 @@ This is using:
 ### Pages/Content
 
 - [ ] Home
+- [ ] Blog
 - [ ] Podcast
 - [ ] Youtube
 - [ ] Twitch
