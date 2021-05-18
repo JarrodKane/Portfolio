@@ -17,8 +17,14 @@ export default function Home() {
           as React, Next.js, Node, etc"
       />
       <Row>
-        <Icon imageFile="/images/github.svg" primary={true} />
-        <Icon imageFile="/images/linkedin.svg" />
+        <Icon
+          imageFile="/images/github.svg"
+          linkRef="https://github.com/JarrodKane"
+        />
+        <Icon
+          imageFile="/images/linkedin.svg"
+          linkRef="https://www.linkedin.com/in/jarrodkane/"
+        />
       </Row>
       <div
         className={`flex flex-col content-center justify-self-center items-center `}
