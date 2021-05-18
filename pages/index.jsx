@@ -17,32 +17,32 @@ export default function Home() {
         text=" I’m a developer from Melbourne Australia. I focus on technologies such
           as React, Next.js, Node, etc"
       />
-      <Row>
-        <Icon
-          imageFile="/images/github.svg"
-          linkRef="https://github.com/JarrodKane"
-        />
-        <Icon
-          imageFile="/images/linkedin.svg"
-          linkRef="https://www.linkedin.com/in/jarrodkane/"
-        />
-      </Row>
+
       <div
         className={`flex flex-col content-center justify-self-center items-center `}
       >
         <Project
-          title="Test project"
-          text="test Text for the project to display"
+          title="Portfolio Site"
+          text="Site created with Next.js. The aim of this site was to create a blog that would get content from Contentful, and was to try to use Tailwindcss"
           imageRef="test.jpg"
+          githubRef="https://github.com/JarrodKane/Portfolio"
+          linkRef="https://jarrodkane.com/"
         />
         <Project
-          title="Test 2"
-          text="test Text for the project to display"
+          title="Little Piggy"
+          text={`Little Piggy is based off the Pig Dice Game.
+          It was created when I was learning React Hooks, styled-components, and Framer-motion.
+          It's hosted on netlify`}
           imageRef="test.jpg"
+          linkRef="https://angry-williams-202a5d.netlify.app/"
+          githubRef="https://github.com/JarrodKane/little-piggy"
         />
         <Project
-          title="Test 3"
-          text="test Text for the project to display"
+          title="Chaos-TODO"
+          text="A basic todo list that was made while streaming live. It has sounds and was made to create a slightly more interesting todolist
+          - React hooks, styled componets, react-beautiful-dnd
+
+          "
           imageRef="test.jpg"
         />
       </div>

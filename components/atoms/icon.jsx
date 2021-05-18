@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 /**
  * Primary UI component for user interaction
  */
-export const Icon = ({ imageFile, linkRef }) => {
+export const Icon = ({ imageFile, linkRef, props }) => {
   return (
     <a href={`${linkRef}`} rel="noopener" target="_blank">
       <div
         type="icon"
-        className={`h-24 w-24 flex p-5 bg-gray-300 rounded-lg shadow-xl hover:bg-red-500 cursor-pointer  transition duration-300 ease-in-out `}
+        className={`flex bg-gray-300 rounded-lg shadow-xl hover:bg-red-500 cursor-pointer  transition duration-300 ease-in-out  ${props}`}
       >
         <img src={imageFile}></img>
       </div>

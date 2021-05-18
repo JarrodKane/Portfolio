@@ -1,9 +1,9 @@
 import React from "react";
 
-const Row = ({ children }) => {
+const Row = ({ props, children }) => {
   return (
     <div
-      className={`max-w-xs mx-auto flex flex-row justify-around p-4 md:justify-start md:max-w-full`}
+      className={`max-w-xs mx-auto flex flex-row justify-around p-4 ${props}`}
     >
       {children}
     </div>
