@@ -15,7 +15,7 @@ const Textbox = ({
   return (
     <div className={`w-full  p-4`}>
       {heading ? <Headings /> : null}
-      {text ? <Text /> : null}
+      {text ? <Text text={text} /> : null}
     </div>
   );
 };

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import LinkTo from "../atoms/linkTo";
 import Modal from "../molecules/modal";
 
+const { detect } = require("detect-browser");
+const browser = detect();
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,9 +18,13 @@ const Navigation = () => {
     }
   };
 
+  console.log(browser.name);
+
   return (
-    <div
-      className={`fixed top-0 flex w-screen  h-14 bg-gray-500  shadow-md justify-end `}
+    <nav
+      className={` sticky top-0 z-10  flex w-screen  h-14 bg-gray-100  shadow-md justify-end  backdrop-filter backdrop-blur-lg  border-b border-gray-200 bg-opacity-30 firefox:bg-opacity-90 ${
+        browser.name === "firefox" ? "bg-opacity-90 border-gray-300" : ""
+      }`}
     >
       <Modal isOpen={isOpen}>
         <LinkTo label="Home" address="/" props={`text-5xl text-gray-200`} />
@@ -79,7 +86,7 @@ const Navigation = () => {
           </g>
         </svg>
       </div>
-    </div>
+    </nav>
   );
 };
 
