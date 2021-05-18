@@ -18,8 +18,6 @@ const Navigation = () => {
     }
   };
 
-  console.log(browser.name);
-
   return (
     <nav
       className={` sticky top-0 z-10  flex w-screen  h-14 bg-gray-100  shadow-md justify-end  backdrop-filter backdrop-blur-lg  border-b border-gray-200 bg-opacity-30 firefox:bg-opacity-90 ${
@@ -30,7 +28,7 @@ const Navigation = () => {
         <LinkTo label="Home" address="/" props={`text-5xl text-gray-200`} />
         <LinkTo
           label="Blog"
-          address="/Blog/"
+          address="/blog/"
           props={`text-5xl text-gray-200`}
         />
         <LinkTo
