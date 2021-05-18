@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import DefaultPage from "../components/templates/defaultPage";
 import { Icon } from "../components/atoms/icon";
@@ -45,6 +46,7 @@ export default function Home() {
           imageRef="test.jpg"
         />
       </div>
+
       <div>Footer</div>
     </DefaultPage>
   );

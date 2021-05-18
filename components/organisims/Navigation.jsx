@@ -19,26 +19,25 @@ const Navigation = () => {
     <div
       className={`fixed top-0 flex w-screen  h-14 bg-gray-500  shadow-md justify-end `}
     >
-      {isOpen ? (
-        <Modal>
-          <LinkTo label="Home" address="/" props={`text-5xl text-gray-200`} />
-          <LinkTo
-            label="Blog"
-            address="/Blog/"
-            props={`text-5xl text-gray-200`}
-          />
-          <LinkTo
-            label="Podcast"
-            address="/Podcast/"
-            props={`text-5xl text-gray-200`}
-          />
-          <LinkTo
-            label="Youtube"
-            address="/Youtube/"
-            props={`text-5xl text-gray-200`}
-          />
-        </Modal>
-      ) : null}
+      <Modal isOpen={isOpen}>
+        <LinkTo label="Home" address="/" props={`text-5xl text-gray-200`} />
+        <LinkTo
+          label="Blog"
+          address="/Blog/"
+          props={`text-5xl text-gray-200`}
+        />
+        <LinkTo
+          label="Podcast"
+          address="/Podcast/"
+          props={`text-5xl text-gray-200`}
+        />
+        <LinkTo
+          label="Youtube"
+          address="/Youtube/"
+          props={`text-5xl text-gray-200`}
+        />
+      </Modal>
+
       <div
         onClick={() => {
           handleOpen();

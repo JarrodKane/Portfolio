@@ -1,9 +1,11 @@
 import React from "react";
 
-const Modal = ({ children }) => {
+const Modal = ({ isOpen, children }) => {
   return (
     <div
-      className={`modal opacity-95 bg-red-500  fixed w-full h-full top-14 left-0 flex items-center justify-center  cursor-default`}
+      className={`modal bg-red-500  h-full opacity-95 fixed w-full left-0    overflow-hidden  origin-top top-14  duration-300 scale-y-0 ${
+        isOpen ? "" : "transform"
+      }`}
     >
       <div
         className={` flex flex-col  w-full h-full   items-baseline justify-center`}

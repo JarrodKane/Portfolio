@@ -13,7 +13,7 @@ function ProfileImage({
   return (
     <div
       type="profileImage"
-      className={`w-10/12 h-52 bg-profile-image bg-cover bg-center  rounded-r-lg shadow-xl  flex items-end mt-12 mb-4`}
+      className={`w-10/12 h-52 bg-profile-image bg-cover bg-center  rounded-r-lg  shadow-md  flex items-end mt-12 mb-4`}
       {...props}
     >
       <Headings
