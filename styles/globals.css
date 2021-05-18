@@ -26,6 +26,8 @@
   weight: 100;
 }
 
+@import url("./animation.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

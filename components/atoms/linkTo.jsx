@@ -5,7 +5,7 @@ const LinkTo = ({ label, address, props }) => {
   return (
     <Link href={address}>
       <div
-        className={`flex justify-center items-center w-full h-28 cursor-pointer hover:bg-purple-200 ${props}`}
+        className={`flex justify-center items-center w-full h-28 hover:bg-gray-200 cursor-pointer ${props}`}
       >
         {label}
       </div>

@@ -1,0 +1,29 @@
+/* SVG ANIMATION */
+
+/* 
+--------------------------------------------------------------
+Hamburger icon
+--------------------------------------------------------------
+ */
+#recB {
+  transition: all 0.5s ease;
+}
+
+#recM {
+  transition: all 0.7s ease;
+}
+
+#recT {
+  transition: all 0.9s ease;
+}
+
+svg:hover #recM,
+svg:hover #recT,
+svg:hover #recB {
+  fill: rgba(248, 113, 113, 04);
+}
+
+.vHam {
+  transform: translate(100%, 0%) rotate(90deg);
+  fill: black;
+}
