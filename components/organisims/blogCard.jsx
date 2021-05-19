@@ -15,7 +15,11 @@ function BlogCard({
   num,
   thumbNail,
 }) {
-  console.log(thumbNail.fields);
+  // Just adding this in here in case I forget to add in a thumbnail for some blog posts
+  let thumbNailUrl = `/images/${imageRef}`;
+  if (thumbNail.fields !== undefined) {
+    thumbNailUrl = `https:${thumbNail.fields.file.url}`;
+  }
 
   return (
     <>
@@ -23,9 +27,9 @@ function BlogCard({
         <div className="w-4/6 bg-white rounded-xl shadow-md overflow-hidden   mx-5 my-4  lg:my-6 flex">
           <Image
             className="h-72 w-4/6 object-cover"
-            src={`https:${thumbNail.fields.file.url}`}
-            width={thumbNail.fields.file.details.image.width}
-            height={thumbNail.fields.file.details.image.height}
+            src={thumbNailUrl}
+            width={700}
+            height={400}
             alt="Man looking at item at a store"
           />
           <div className="w-2/6 p-8 pb-0">
@@ -45,9 +49,9 @@ function BlogCard({
           </div>
           <Image
             className="h-72 w-4/6 object-cover"
-            src={`https:${thumbNail.fields.file.url}`}
-            width={thumbNail.fields.file.details.image.width}
-            height={thumbNail.fields.file.details.image.height}
+            src={thumbNailUrl}
+            width={700}
+            height={400}
             alt="Man looking at item at a store"
           />
         </div>
