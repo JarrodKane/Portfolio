@@ -46,8 +46,6 @@ export default function Home() {
           imageRef="test.jpg"
         />
       </div>
-
-      <div>Footer</div>
     </DefaultPage>
   );
 }

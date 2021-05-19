@@ -4,10 +4,10 @@ import { color_background } from "../../constants/colors";
 
 export default function DefaultPage({ children }) {
   return (
-    <div className={`bg-gray-50 h-full`}>
+    <div className={`bg-gray-50 min-h-screen flex flex-col`}>
       <Navigation />
-      <div>{children}</div>
-      <div>Footer</div>
+      <div className="flex-grow">{children}</div>
+      <div className={` w-full h-10`}>Footer</div>
     </div>
   );
 }
