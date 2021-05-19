@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "profile-image": "url('/images/profile.jpg')",
+        "404-image": "url('/images/nic404.jpg')",
       }),
       fontFamily: {
         MyFont: ["Poppins", "sans-serif"],

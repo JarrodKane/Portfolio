@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { createClient } from "contentful";
 
 import DefaultPage from "../../components/templates/defaultPage";
-import ProfileImage from "../../components/molecules/profileImage";
-import Textbox from "../../components/molecules/textbox";
 
 import BlogCard from "../../components/organisims/blogCard";
 
@@ -24,8 +22,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ posts }) {
-  console.log(posts[0].sys);
-
   return (
     <DefaultPage>
       <div className={`flex flex-col items-center`}>
@@ -33,6 +29,7 @@ export default function Home({ posts }) {
           <BlogCard
             num={i}
             key={`${post.sys.id}`}
+            thumbNail={post.fields.thumbNail}
             title={post.fields.title}
             excerpt={post.fields.shortDesc}
             publishDate={post.fields.publishDate}

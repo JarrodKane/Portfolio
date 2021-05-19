@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import Textbox from "../molecules/textbox";
 import Row from "../molecules/row";
@@ -12,14 +13,19 @@ function BlogCard({
   imageRef,
   linkRef,
   num,
+  thumbNail,
 }) {
+  console.log(thumbNail.fields);
+
   return (
     <>
       {num % 2 === 0 ? (
         <div className="w-4/6 bg-white rounded-xl shadow-md overflow-hidden   mx-5 my-4  lg:my-6 flex">
-          <img
+          <Image
             className="h-72 w-4/6 object-cover"
-            src={`/images/${imageRef}`}
+            src={`https:${thumbNail.fields.file.url}`}
+            width={thumbNail.fields.file.details.image.width}
+            height={thumbNail.fields.file.details.image.height}
             alt="Man looking at item at a store"
           />
           <div className="w-2/6 p-8 pb-0">
@@ -37,9 +43,11 @@ function BlogCard({
             </div>
             <p className="mt-2 text-gray-500">{excerpt}</p>
           </div>
-          <img
+          <Image
             className="h-72 w-4/6 object-cover"
-            src={`/images/${imageRef}`}
+            src={`https:${thumbNail.fields.file.url}`}
+            width={thumbNail.fields.file.details.image.width}
+            height={thumbNail.fields.file.details.image.height}
             alt="Man looking at item at a store"
           />
         </div>
