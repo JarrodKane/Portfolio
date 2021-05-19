@@ -9,7 +9,7 @@ export default function lostPage() {
     >
       <Navigation />
       <div className={`w-full h-full flex items-center justify-center`}>
-        <div className="max-w-screen-lg h-28 bg-white rounded-xl shadow-md text-3xl flex items-center p-3">
+        <div className="max-w-screen-lg h-28 bg-white rounded-xl shadow-md text-3xl flex items-center p-3 m-3">
           Looks like you found the 404 page
         </div>
       </div>
