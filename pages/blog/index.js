@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { createClient } from "contentful";
 
 import DefaultPage from "../../components/templates/defaultPage";
@@ -35,8 +36,8 @@ export default function Home({ posts }) {
             publishDate={post.fields.publishDate}
             type={post.fields.type}
             imageRef="test.jpg"
-            linkRef="https://jarrodkane.com/"
-          />
+            linkRef={post.fields.slug}
+          ></BlogCard>
         ))}
       </div>
     </DefaultPage>

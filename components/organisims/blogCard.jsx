@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import Textbox from "../molecules/textbox";
 import Row from "../molecules/row";
@@ -21,10 +22,20 @@ function BlogCard({
     thumbNailUrl = `https:${thumbNail.fields.file.url}`;
   }
 
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push(`blog/${linkRef}`);
+  };
+
   return (
     <>
       {num % 2 === 0 ? (
-        <div className="md:w-4/6 w-5/6 h-60 bg-white rounded-xl shadow-md overflow-hidden   mx-5 my-4 flex">
+        <div
+          onClick={handleClick}
+          className="md:w-4/6 w-5/6 h-60 bg-white rounded-xl shadow-md overflow-hidden   mx-5 my-4 flex"
+        >
           <div className="flex w-1/2">
             <Image
               className="object-cover"
@@ -43,7 +54,10 @@ function BlogCard({
           </div>
         </div>
       ) : (
-        <div className="md:w-4/6 w-5/6 h-60 bg-white rounded-xl shadow-md overflow-hidden mx-5 my-4   flex justify-end">
+        <div
+          onClick={handleClick}
+          className="md:w-4/6 w-5/6 h-60 bg-white rounded-xl shadow-md overflow-hidden mx-5 my-4   flex justify-end"
+        >
           <div className="w-1/2  md:p-8 p-2 pb-0  flex flex-col">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
               {title}
