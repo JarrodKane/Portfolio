@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LinkTo from "../atoms/linkTo";
 import Modal from "../molecules/modal";
 
@@ -11,12 +11,19 @@ const Navigation = () => {
   const handleOpen = () => {
     const curModal = isOpen;
     setIsOpen(!curModal);
-    if (curModal) {
+  };
+
+  // This is setting the overflow to being hidden when the modal is up.
+  // It makes it look more clean and avoids you from scrolling by accident and losing your place on the page
+  useEffect(() => {
+    const curModal = isOpen;
+
+    if (!curModal) {
       document.body.style.overflow = "unset";
     } else {
       document.body.style.overflow = "hidden";
     }
-  };
+  }, [isOpen]);
 
   return (
     <nav
