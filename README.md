@@ -1,5 +1,7 @@
 # Next.js portfolio
 
+LIVE VERSION [https://jarrodsite.netlify.app/](https://jarrodsite.netlify.app/).
+
 Objective of this project is to use Next.js to create my own portfolio.
 The Home page is meant to hold multiple sections, and the only other pages are Blog/Twitch/Youtube.
 Blog pages will be populated by contentful.
