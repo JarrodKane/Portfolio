@@ -15,9 +15,10 @@ export const getStaticProps = async () => {
 
   const res = await client.getEntries({ content_type: "blogPost" });
 
+  // Reversed the array so that the older posts are at the bottom and the newer posts are first
   return {
     props: {
-      posts: res.items,
+      posts: res.items.reverse(),
     },
     revalidate: 1,
   };
