@@ -24,7 +24,7 @@ export default function Home() {
         <Project
           title="Portfolio Site"
           text="Site created with Next.js. The aim of this site was to create a blog that would get content from Contentful, and was to try to use Tailwindcss"
-          imageRef="test.jpg"
+          imageRef="blogSite.png"
           githubRef="https://github.com/JarrodKane/Portfolio"
           linkRef="https://jarrodkane.com/"
         />
@@ -33,7 +33,7 @@ export default function Home() {
           text={`Little Piggy is based off the Pig Dice Game.
           It was created when I was learning React Hooks, styled-components, and Framer-motion.
           It's hosted on netlify`}
-          imageRef="test.jpg"
+          imageRef="littlePiggy.png"
           linkRef="https://angry-williams-202a5d.netlify.app/"
           githubRef="https://github.com/JarrodKane/little-piggy"
         />
@@ -44,6 +44,7 @@ export default function Home() {
 
           "
           imageRef="test.jpg"
+          githubRef="https://github.com/JarrodKane/Chaos-TODO"
         />
       </div>
     </DefaultPage>

@@ -10,7 +10,7 @@ function project({ title, text, imageRef, githubRef, linkRef }) {
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <img
-            className="h-72  w-full object-cover md:h-full md:w-72"
+            className="h-72  w-full object-cover  md:w-72"
             src={`/images/${imageRef}`}
             alt="Man looking at item at a store"
           />

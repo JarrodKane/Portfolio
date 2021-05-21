@@ -18,12 +18,13 @@ export const getStaticProps = async () => {
   // Reversed the array so that the older posts are at the bottom and the newer posts are first
   return {
     props: {
-      posts: res.items.reverse(),
+      posts: res.items.reverse(), //?
     },
     revalidate: 1,
   };
 };
 
+// Should add in some pagination for when there are many posts
 export default function Home({ posts }) {
   return (
     <DefaultPage>
