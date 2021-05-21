@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Skeleton from "../../components/templates/skeleton";
 
 import DefaultPage from "../../components/templates/defaultPage";
 
@@ -24,7 +25,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -34,6 +35,16 @@ export const getStaticProps = async ({ params }) => {
     "fields.slug": params.slug,
   });
 
+  // If the post does not exisit at all it'll redirect and not show the skeleton
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: { blogPost: items[0] },
     revalidate: 1,
@@ -41,6 +52,12 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function PostDetails({ blogPost }) {
+  // If the post exists but content is not grabbed yet it will fallback to the Skeleton page
+  // This is because of incremental static creation
+  if (!blogPost) {
+    return <Skeleton />;
+  }
+
   const { title, type, thumbNail, body } = blogPost.fields;
   const { createdAt } = blogPost.sys;
 
