@@ -1,26 +1,27 @@
 @font-face {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
+
   src: url("/fonts/Poppins-Regular.ttf");
   font-style: normal;
   weight: 400;
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   src: url("/fontsPoppins-Bold.ttf");
   font-style: bold;
   weight: 700;
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   src: url("/fontsPoppins-Black.ttf");
   font-style: black;
   weight: 900;
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   src: url("/fonts/Poppins-Thin.ttf");
   font-style: thin;
   weight: 100;
@@ -31,3 +32,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Working on adding in an inner text shadow, copied out some code to make just normal text-shadows */
+@responsive {
+  .text-shadow {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .text-shadow-none {
+    text-shadow: none;
+  }
+}
