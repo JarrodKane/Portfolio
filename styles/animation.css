@@ -27,3 +27,38 @@ svg:hover #recB {
   transform: translate(100%, 0%) rotate(90deg);
   fill: black;
 }
+
+:root {
+  --dark-color: #635bff;
+  --light-color: #80e9ff;
+}
+
+/* Up Arrow */
+#dark {
+  fill: var(--dark-color);
+}
+
+#light {
+  fill: var(--light-color);
+}
+
+#tDark1,
+#tDark2,
+#tLight {
+  transition: all 1s ease;
+}
+
+#tDark2 {
+  transform: translateY(100%);
+}
+
+svg:hover #tLight {
+  transform: translateY(-20%);
+}
+svg:hover #tDark1 {
+  transform: translateY(-40%);
+  opacity: 0;
+}
+svg:hover #tDark2 {
+  transform: translateY(0%);
+}
