@@ -28,7 +28,7 @@ export const getStaticProps = async () => {
 export default function Home({ posts }) {
   return (
     <DefaultPage>
-      <div className={`flex flex-col items-center`}>
+      <div className={`flex flex-col items-center mt-5`}>
         {posts.map((post, i) => (
           <BlogCard
             num={i}
