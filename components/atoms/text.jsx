@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Text = ({ primary, text, weight, size, props }) => {
+export const Text = ({ primary, text, weight, size, props, children }) => {
   const mode = primary ? "blue" : "red";
 
   let styling = "";
@@ -21,7 +21,10 @@ export const Text = ({ primary, text, weight, size, props }) => {
   }
 
   return (
-    <p type="text" className={`${styling}  font-${weight} ${props}`}>
+    <p
+      type="text"
+      className={`${styling}  font-${weight} ${props} whitespace-pre-line`}
+    >
       {text}
     </p>
   );

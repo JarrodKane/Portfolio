@@ -13,10 +13,14 @@ export default function Home() {
   return (
     <DefaultPage>
       <ProfileImage />
-      <Textbox
-        text=" I’m a developer from Melbourne Australia. I focus on technologies such
-          as React, Next.js, Node, etc"
-      />
+      <div className={`w-full flex justify-center`}>
+        <Textbox
+          text={`I’m a developer from Melbourne Australia. 
+          I focus on technologies/frameworks such as React, Next.js, Node, etc...
+          
+          My other hobbies include MMA, BJJ, and bad movies which can also be found on this site`}
+        ></Textbox>
+      </div>
 
       <div
         className={`flex flex-col content-center justify-self-center items-center `}
