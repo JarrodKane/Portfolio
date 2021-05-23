@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { createClient } from "contentful";
 import Image from "next/image";
+import Head from "next/head";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Skeleton from "../../components/templates/skeleton";
 
+import Skeleton from "../../components/templates/skeleton";
 import DefaultPage from "../../components/templates/defaultPage";
 
 const client = createClient({
@@ -62,18 +63,23 @@ export default function PostDetails({ blogPost }) {
   const { createdAt } = blogPost.sys;
 
   return (
-    <DefaultPage>
-      <Image
-        src={`https://${thumbNail.fields.file.url}`}
-        width={thumbNail.fields.file.details.image.width}
-        height={thumbNail.fields.file.details.image.height}
-      />
-      <h2>{title}</h2>
-      <div>
-        <p>{type}</p>
-        <p>{createdAt}</p>
-      </div>
-      <div className={``}>{documentToReactComponents(body)}</div>
-    </DefaultPage>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <DefaultPage>
+        <Image
+          src={`https://${thumbNail.fields.file.url}`}
+          width={thumbNail.fields.file.details.image.width}
+          height={thumbNail.fields.file.details.image.height}
+        />
+        <h2>{title}</h2>
+        <div>
+          <p>{type}</p>
+          <p>{createdAt}</p>
+        </div>
+        <div className={``}>{documentToReactComponents(body)}</div>
+      </DefaultPage>
+    </>
   );
 }
