@@ -35,19 +35,19 @@
 
 /* Working on adding in an inner text shadow, copied out some code to make just normal text-shadows */
 @responsive {
-  .text-shadow {
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  .inner-text-shadow {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1), -1px -1px #444;
   }
 
-  .text-shadow-md {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  .inner-text-shadow-md {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), -2px -2px rgba(0, 0, 0, 1);
   }
 
-  .text-shadow-lg {
-    text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
+  .inner-text-shadow-lg {
+    text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), -5px -5px rgba(0, 0, 0, 1);
   }
 
-  .text-shadow-none {
+  .inner-text-shadow-none {
     text-shadow: none;
   }
 }

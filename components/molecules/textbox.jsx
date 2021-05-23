@@ -13,9 +13,9 @@ const Textbox = ({
   children,
 }) => {
   return (
-    <div className={`w-full  p-4`}>
+    <div className={` w-4/6  p-4 bg-gray-700 m-5`}>
       {heading ? <Headings /> : null}
-      {text ? <Text text={text} /> : null}
+      {text ? <Text text={text} props={`text-white`} /> : null}
     </div>
   );
 };

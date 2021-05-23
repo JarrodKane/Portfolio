@@ -39,7 +39,7 @@ This is using:
 ### Features
 
 - [x] Storybook
-- [ ] CMS (Contentful)
+- [x] CMS (Contentful)
 - [ ] Dark/Light theme
 - [ ] RSS Feed
 
