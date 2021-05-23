@@ -22,20 +22,10 @@ const BackToTop = () => {
     }
   };
 
+  // This will check where the screen is at and see if it needs to display the back to top yet
   useEffect(() => {
     window.addEventListener("scroll", scrollDisplay);
   }, []);
-
-  // TODO: Display back to top only after scrolling has begun
-
-  // This is setting the overflow to being hidden when the modal is up.
-  // It makes it look more clean and avoids you from scrolling by accident and losing your place on the page
-
-  // className={` sticky top-0 z-10  flex w-screen  h-14 bg-gray-100  shadow-md justify-end  backdrop-filter backdrop-blur-lg  border-b border-gray-200 bg-opacity-30 firefox:bg-opacity-90 ${
-  //   browser.name === "firefox"
-  //     ? "bg-opacity-90 border-gray-300 bg-gray-100 "
-  //     : ""
-  // }`}
 
   return (
     <div className={` sticky bottom-5   flex w-screen md:pr-3  justify-end  `}>
