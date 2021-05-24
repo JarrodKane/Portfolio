@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Head from "next/head";
 import ReactPlayer from "react-player";
@@ -7,19 +7,19 @@ import DefaultPage from "../components/templates/defaultPage";
 
 import Textbox from "../components/molecules/textbox";
 
-const Twitch = (props) => {
+const Youtube = (props) => {
   return (
     <>
       <Head>
-        <title>Twitch Channel</title>
+        <title>Youtube</title>
       </Head>
       <DefaultPage props={` flex-col items-center  `}>
         <div className={`w-screen p-12`}>
           <ReactPlayer
             key={uuidv4()}
             playerId={uuidv4()}
-            className="react-player"
-            url="https://www.twitch.tv/grimegoblin"
+            className={`react-player`}
+            url="https://youtu.be/f8hk3hX1ZHc"
             width="100%"
             height="50vh"
           />
@@ -38,13 +38,11 @@ const Twitch = (props) => {
         )} */}
 
         <Textbox
-          text={`Here's my twitch channel
-        It's used mainly for live programming/designing
-        
-        Sometimes the odd game will be played as well, but normally it's just me getting confused and worried about whey something is not working`}
+          text={`Here's my Youtube channel
+       It's used mainly for making more informative videos about tech and the like.`}
         />
       </DefaultPage>
     </>
   );
 };
-export default Twitch;
+export default Youtube;
