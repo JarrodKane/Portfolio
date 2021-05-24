@@ -6,6 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Skeleton from "../../components/templates/skeleton";
 import DefaultPage from "../../components/templates/defaultPage";
+import BlogContent from "../../components/templates/blogContent";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -67,18 +68,14 @@ export default function PostDetails({ blogPost }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <DefaultPage>
-        <Image
-          src={`https://${thumbNail.fields.file.url}`}
-          width={thumbNail.fields.file.details.image.width}
-          height={thumbNail.fields.file.details.image.height}
+      <DefaultPage props="flex-col items-center">
+        <BlogContent
+          title={title}
+          type={type}
+          thumbNail={thumbNail}
+          body={body}
+          createdAt={createdAt}
         />
-        <h2>{title}</h2>
-        <div>
-          <p>{type}</p>
-          <p>{createdAt}</p>
-        </div>
-        <div className={``}>{documentToReactComponents(body)}</div>
       </DefaultPage>
     </>
   );

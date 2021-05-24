@@ -41,13 +41,18 @@ const Navigation = () => {
           props={`text-5xl text-gray-200`}
         />
         <LinkTo
-          label="Podcast"
-          address="/Podcast/"
+          label="Twitch"
+          address="/twitch/"
           props={`text-5xl text-gray-200`}
         />
         <LinkTo
           label="Youtube"
-          address="/Youtube/"
+          address="/youtube/"
+          props={`text-5xl text-gray-200`}
+        />
+        <LinkTo
+          label="Podcast"
+          address="/podcast/"
           props={`text-5xl text-gray-200`}
         />
       </Modal>

@@ -11,7 +11,7 @@ import Project from "../components/organisims/project";
 
 export default function Home() {
   return (
-    <DefaultPage>
+    <DefaultPage props="flex-col">
       <ProfileImage />
       <div className={`w-full flex justify-center`}>
         <Textbox

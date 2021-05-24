@@ -27,22 +27,20 @@ export const getStaticProps = async () => {
 // Should add in some pagination for when there are many posts
 export default function Home({ posts }) {
   return (
-    <DefaultPage>
-      <div className={`flex flex-col items-center mt-5`}>
-        {posts.map((post, i) => (
-          <BlogCard
-            num={i}
-            key={`${post.sys.id}`}
-            thumbNail={post.fields.thumbNail}
-            title={post.fields.title}
-            excerpt={post.fields.shortDesc}
-            publishDate={post.fields.publishDate}
-            type={post.fields.type}
-            imageRef="test.jpg"
-            linkRef={post.fields.slug}
-          ></BlogCard>
-        ))}
-      </div>
+    <DefaultPage props=" flex-col items-center mt-5 w-screen">
+      {posts.map((post, i) => (
+        <BlogCard
+          num={i}
+          key={`${post.sys.id}`}
+          thumbNail={post.fields.thumbNail}
+          title={post.fields.title}
+          excerpt={post.fields.shortDesc}
+          publishDate={post.fields.publishDate}
+          type={post.fields.type}
+          imageRef="test.jpg"
+          linkRef={post.fields.slug}
+        ></BlogCard>
+      ))}
     </DefaultPage>
   );
 }

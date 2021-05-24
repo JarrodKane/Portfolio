@@ -3,11 +3,11 @@ import Navigation from "../organisims/Navigation";
 import BackToTop from "../organisims/backToTop";
 import { color_background } from "../../constants/colors";
 
-export default function DefaultPage({ children }) {
+export default function DefaultPage({ children, props }) {
   return (
-    <div className={` bg-gray-50 min-h-screen flex flex-col`}>
+    <div className={` bg-gray-100 min-h-screen `}>
       <Navigation />
-      <div className="flex-grow">{children}</div>
+      <div className={`flex-grow flex  ${props}`}>{children}</div>
       <BackToTop />
     </div>
   );
