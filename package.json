@@ -17,8 +17,10 @@
     "next": "^10.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-player": "^2.9.0",
     "sass": "^1.32.12",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
