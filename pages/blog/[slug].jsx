@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { createClient } from "contentful";
 import Image from "next/image";
-import Head from "next/head";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
 import Skeleton from "../../components/templates/skeleton";
-import DefaultPage from "../../components/templates/defaultPage";
 import BlogContent from "../../components/templates/blogContent";
+
+import DefaultPage from "../../components/templates/defaultPage";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -64,19 +63,14 @@ export default function PostDetails({ blogPost }) {
   const { createdAt } = blogPost.sys;
 
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <DefaultPage props="flex-col items-center">
-        <BlogContent
-          title={title}
-          type={type}
-          thumbNail={thumbNail}
-          body={body}
-          createdAt={createdAt}
-        />
-      </DefaultPage>
-    </>
+    <DefaultPage props="w-screen flex justify-center mt-5">
+      <BlogContent
+        title={title}
+        type={type}
+        createdAt={createClient}
+        thumbNail={thumbNail}
+        body={body}
+      />
+    </DefaultPage>
   );
 }

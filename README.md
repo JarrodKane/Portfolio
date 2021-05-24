@@ -33,6 +33,7 @@ This is using:
 ## TODO:
 
 - [x] Create readme
+- [ ] Styling
 - [ ] Mobile view
 - [ ] Desktop view
 
@@ -41,15 +42,14 @@ This is using:
 - [x] Storybook
 - [x] CMS (Contentful)
 - [ ] Dark/Light theme
-- [ ] RSS Feed
 
 ### Pages/Content
 
-- [ ] Home
-- [ ] Blog
-- [ ] Podcast
-- [ ] Youtube
-- [ ] Twitch
+- [x] Home
+- [x] Blog
+- [x] Podcast
+- [x] Youtube
+- [x] Twitch
 
 ### Testing
 
