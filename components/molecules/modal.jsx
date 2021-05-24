@@ -7,9 +7,8 @@ const Modal = ({ isOpen, children }) => {
         isOpen ? "" : "transform"
       }`}
     >
-      <div
-        className={` flex flex-col  w-full h-full   items-baseline justify-center`}
-      >
+      {/* Needed a negative margin to account for the navigation bar at the top */}
+      <div className={` flex flex-col  w-full h-full  justify-center -mt-14`}>
         {children}
       </div>
     </div>
