@@ -1,25 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
-
-import { createClient } from "contentful";
-import parse from "html-react-parser";
 
 import DefaultPage from "../../components/templates/defaultPage";
-
 import PodcastCard from "../../components/organisims/podcastCard";
-
-const makeCall = async () => {
-  try {
-    const resp = await axios.get(
-      "https://pinecast.com/jsonfeed/end-of-the-reel"
-    );
-
-    return resp.data;
-  } catch (err) {
-    // Handle Error Here
-    console.error(err);
-  }
-};
+import { makeCall } from "../../api/pinecast";
 
 export const getStaticProps = async () => {
   const res = await makeCall();

@@ -7,8 +7,7 @@ import parse from "html-react-parser";
 function PodcastCard({ title, date, url, num, id, body }) {
   const router = useRouter();
 
-  //TODO: Fix regex so that it includes single chracters like "A view to kill", currently it does not grab the A
-  let newTitle = title.match(/[aA-zZ]\w+/g);
+  let newTitle = title.match(/\w+/g);
   newTitle = newTitle.join("-");
 
   const handleClick = (e) => {
