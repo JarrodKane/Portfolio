@@ -4,7 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const BlogContent = ({ children, ...props }) => {
   return (
-    <div className={`flex flex-col  w-3/5 justify-center`}>
+    <div className={`flex flex-col md:w-3/5 w-5/6 justify-center`}>
       <Image
         src={`https://${props.thumbNail.fields.file.url}`}
         width={props.thumbNail.fields.file.details.image.width}

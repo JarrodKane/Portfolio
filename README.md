@@ -28,6 +28,10 @@ This is using:
 - git clone the repo
 - Cd into the project
 - `npm i` to install all the modules
+- This is set up to grab contentful API information from a blog, you will need CONTENTFUL_SPACE_ID & CONTENTFUL_ACCESS_KEY
+  that should be placed into an .env.local file
+  - the fields are thumbnail, title, shortDesc, publishDate, type, slug
+  - Look into the blog/index page for more information on what gets deconstructed from a normal blog post
 - `npm run dev` to run the nextjs project
 
 ## TODO:
