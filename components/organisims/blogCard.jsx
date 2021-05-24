@@ -33,7 +33,6 @@ function BlogCard({
   };
 
   const changeHover = () => {
-    console.log(isHoverd);
     let curHover = !isHoverd;
 
     setIsHoverd(curHover);
