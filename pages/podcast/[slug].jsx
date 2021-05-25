@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createClient } from "contentful";
 
 import Skeleton from "../../components/templates/skeleton";
-import PodcastContent from "../../components/templates/blogContent";
+import PodcastContent from "../../components/templates/podcastContent";
 
 import DefaultPage from "../../components/templates/defaultPage";
 import { makeCall } from "../../api/pinecast";

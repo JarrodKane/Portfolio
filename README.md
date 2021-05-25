@@ -40,6 +40,7 @@ This is using:
 - [ ] Styling
 - [ ] Mobile view
 - [ ] Desktop view
+- [ ] Convert to TypeScript
 
 ### Features
 
