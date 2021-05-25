@@ -1,37 +1,52 @@
-@font-face {
-  font-family: "Poppins", sans-serif;
-
-  src: url("/fonts/Poppins-Regular.ttf");
-  font-style: normal;
-  weight: 400;
-}
-
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url("/fontsPoppins-Bold.ttf");
-  font-style: bold;
-  weight: 700;
-}
-
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url("/fontsPoppins-Black.ttf");
-  font-style: black;
-  weight: 900;
-}
-
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url("/fonts/Poppins-Thin.ttf");
-  font-style: thin;
-  weight: 100;
-}
-
-@import url("./animation.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("./animation.css");
+
+@layer base {
+  @font-face {
+    font-family: "Poppins", sans-serif;
+
+    src: url("/fonts/Poppins-Regular.ttf");
+    font-style: normal;
+    weight: 400;
+  }
+
+  @font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("/fontsPoppins-Bold.ttf");
+    font-style: bold;
+    weight: 700;
+  }
+
+  @font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("/fontsPoppins-Black.ttf");
+    font-style: black;
+    weight: 900;
+  }
+
+  @font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("/fonts/Poppins-Thin.ttf");
+    font-style: thin;
+    weight: 100;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  p {
+    @apply text-lg;
+  }
+}
 
 /* Working on adding in an inner text shadow, copied out some code to make just normal text-shadows */
 @responsive {
