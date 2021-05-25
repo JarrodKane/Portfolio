@@ -3,11 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 
 import DefaultPage from "../components/templates/defaultPage";
-import { Icon } from "../components/atoms/icon";
 import ProfileImage from "../components/molecules/profileImage";
 import Textbox from "../components/molecules/textbox";
-import { Text } from "../components/atoms/text";
-import Row from "../components/molecules/row";
 
 import Project from "../components/organisims/project";
 
@@ -15,7 +12,7 @@ export default function Home() {
   return (
     <DefaultPage props="flex-col">
       <ProfileImage />
-      <div className={`w-full flex flex-col  p-3 md:p-8 `}>
+      <div className={`w-full flex flex-col  p-3 md:p-8 items-center `}>
         <Textbox
           text={`I’m a developer from Melbourne Australia. 
           I focus mainly on technologies/frameworks/languages such as React, Next.js, Node, etc...

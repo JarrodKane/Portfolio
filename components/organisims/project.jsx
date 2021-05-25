@@ -7,7 +7,6 @@ import Image from "next/image";
 
 function project({ title, text, imageRef, githubRef, linkRef }) {
   return (
-    // <div className=" grid grid-col-3  overflow-hidden bg-white rounded-xl shadow-md flex flex-col md:flex-row m-5">
     <div className=" grid md:grid-cols-5 max-w-screen-xl bg-white rounded-xl shadow-md my-5 md:my-5">
       <div
         type={imageRef}
