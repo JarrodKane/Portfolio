@@ -13,7 +13,7 @@ const Youtube = (props) => {
       <Head>
         <title>Youtube</title>
       </Head>
-      <DefaultPage props={` flex-col items-center  `}>
+      <DefaultPage props={`flex flex-col items-center `}>
         <div className={`w-screen p-12 flex justify-center`}>
           <ReactPlayer
             key={uuidv4()}
@@ -26,7 +26,7 @@ const Youtube = (props) => {
         </div>
 
         <Textbox
-          props={`max-w-3xl`}
+          props={`max-w-2xl`}
           text={`Youtube channel
        It's used mainly for making more informative videos about tech and the like.`}
         />

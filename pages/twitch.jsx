@@ -13,7 +13,7 @@ const Twitch = (props) => {
       <Head>
         <title>Twitch Channel</title>
       </Head>
-      <DefaultPage props={` flex-col items-center  `}>
+      <DefaultPage props={`flex flex-col items-center `}>
         <div className={`w-screen p-12 flex justify-center`}>
           <ReactPlayer
             key={uuidv4()}
@@ -24,9 +24,8 @@ const Twitch = (props) => {
             height="50vh"
           />
         </div>
-
         <Textbox
-          props={`max-w-3xl`}
+          props={`max-w-2xl`}
           text={`Twitch channel
         It's used mainly for live programming/designing
         

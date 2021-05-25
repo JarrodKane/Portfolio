@@ -28,7 +28,7 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className={` sticky bottom-5   flex w-screen md:pr-3  justify-end  `}>
+    <div className={` sticky bottom-5 flex w-screen md:pr-3  justify-end  `}>
       <svg
         onClick={handleTop}
         className={`cursor-pointer h-14  transition-all duration-300 ease-in-out  opacity-0   ${

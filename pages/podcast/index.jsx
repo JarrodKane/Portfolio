@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import DefaultPage from "../../components/templates/defaultPage";
 import PodcastCard from "../../components/organisims/podcastCard";
 import { makeCall } from "../../api/pinecast";
+import QuickAccess from "../../components/molecules/quickAccess";
 import next from "next";
 
 export const getStaticProps = async () => {
@@ -30,9 +31,6 @@ const Podcast = ({ episodes }) => {
     totalPages.push(i);
   }
 
-  // Simple pagination that will change depending on which page numebr is hit
-  // TODO: Fix pagination so that the arrows work
-  // TODO: Change pagination into it's own component and make it so only x number of page numbers are displayed at once then it get's a ... eventually if there are too many
   const onChangePage = (value) => {
     let curPages = pages;
     console.log(totalPages);
@@ -64,46 +62,53 @@ const Podcast = ({ episodes }) => {
   };
 
   return (
-    <DefaultPage props=" flex-col items-center mt-5 w-screen">
-      {podcastList.map((episode, i) => (
-        <PodcastCard
-          key={episode.id}
-          id={episode.id}
-          title={episode.title}
-          body={episode.content_html}
-          date={episode.date_published}
-          url={episode.attachments[0].url}
-          num={i}
-        />
-      ))}
-      <div
-        className={`pb-3 w-1/5 flex justify-around content-between items-baseline`}
-      >
-        <div
-          className={`pt-7 text-3xl cursor-pointer`}
-          onClick={() => {
-            onChangePage("down");
-          }}
-        >
-          {`<`}
-        </div>
-        {totalPages.map((number) => (
+    <DefaultPage props="flex flex-row justify-start ">
+      <div className={`pl-5 md:w-3/12 lg:block hidden`}>
+        <QuickAccess list={episodes} />
+      </div>
+      <div className={`flex md:max-w-5xl max-w-3xl flex-col items-start `}>
+        <div className={`flex flex-col items-center`}>
+          {podcastList.map((episode, i) => (
+            <PodcastCard
+              key={episode.id}
+              id={episode.id}
+              title={episode.title}
+              body={episode.content_html}
+              date={episode.date_published}
+              url={episode.attachments[0].url}
+              num={i}
+            />
+          ))}
           <div
-            className={`w-auto h-7 text-3xl cursor-pointer`}
-            onClick={() => {
-              onChangePage(number);
-            }}
+            className={`pb-3 w-1/5 flex justify-around content-between items-baseline`}
           >
-            {number + 1}
+            <div
+              className={`pt-7 text-3xl cursor-pointer`}
+              onClick={() => {
+                onChangePage("down");
+              }}
+            >
+              {`<`}
+            </div>
+            {totalPages.map((number) => (
+              <div
+                className={`w-auto h-7 text-3xl cursor-pointer`}
+                onClick={() => {
+                  onChangePage(number);
+                }}
+              >
+                {number + 1}
+              </div>
+            ))}
+            <div
+              className={`pt-7 text-3xl cursor-pointer`}
+              onClick={() => {
+                onChangePage("up");
+              }}
+            >
+              {`>`}
+            </div>
           </div>
-        ))}
-        <div
-          className={`pt-7 text-3xl cursor-pointer`}
-          onClick={() => {
-            onChangePage("up");
-          }}
-        >
-          {`>`}
         </div>
       </div>
     </DefaultPage>

@@ -5,9 +5,9 @@ import { color_background } from "../../constants/colors";
 
 export default function DefaultPage({ children, props }) {
   return (
-    <div className={` bg-gray-100 min-h-screen `}>
+    <div className={` bg-gray-100 min-h-screen overflow-hidden`}>
       <Navigation />
-      <div className={`flex-grow flex  ${props}`}>{children}</div>
+      <div className={`${props} `}>{children}</div>
       <BackToTop />
     </div>
   );

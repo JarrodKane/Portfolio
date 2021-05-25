@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
 // Should add in some pagination for when there are many posts
 export default function Home({ posts }) {
   return (
-    <DefaultPage props=" flex-col items-center mt-5 w-screen">
+    <DefaultPage props="flex flex-col items-center mt-5 w-screen">
       {posts.map((post, i) => (
         <BlogCard
           num={i}
