@@ -16,7 +16,8 @@ export default function Home() {
       <div className={`w-full flex justify-center`}>
         <Textbox
           text={`I’m a developer from Melbourne Australia. 
-          I focus on technologies/frameworks such as React, Next.js, Node, etc...
+          I focus mainly on technologies/frameworks/languages such as React, Next.js, Node, etc...
+
           
           My other hobbies include MMA, BJJ, and bad movies which can also be found on this site`}
         ></Textbox>
@@ -27,7 +28,14 @@ export default function Home() {
       >
         <Project
           title="Portfolio Site"
-          text="Site created with Next.js. The aim of this site was to create a blog that would get content from Contentful, and was to try to use Tailwindcss"
+          text={`Site created with Next.js.
+          It's using tailwindscss for styling.
+          The site is deployed and hosted on Netlify
+          The content for the blog is pulled in from a headless CMS called Contentful.
+          The content for the Podcast is grabbed from the podcasts RSS feed and then the pages are dynamically generated.
+          
+
+          The aim of this site was to create a blog that would get content from Contentful, and was to try to use Tailwindcss`}
           imageRef="blogSite.png"
           githubRef="https://github.com/JarrodKane/Portfolio"
           linkRef="https://jarrodkane.com/"
@@ -35,6 +43,7 @@ export default function Home() {
         <Project
           title="Little Piggy"
           text={`Little Piggy is based off the Pig Dice Game.
+
           It was created when I was learning React Hooks, styled-components, and Framer-motion.
           It's hosted on netlify`}
           imageRef="littlePiggy.png"
@@ -43,11 +52,10 @@ export default function Home() {
         />
         <Project
           title="Chaos-TODO"
-          text="A basic todo list that was made while streaming live. It has sounds and was made to create a slightly more interesting todolist
-          - React hooks, styled componets, react-beautiful-dnd
-
-          "
+          text={`A basic todo list that was made while streaming live. It has sounds and was made to create a slightly more interesting todolist
+          - React hooks, styled componets, react-beautiful-dnd`}
           imageRef="test.jpg"
+          linkRef="https://gracious-brahmagupta-942870.netlify.app/"
           githubRef="https://github.com/JarrodKane/Chaos-TODO"
         />
       </div>

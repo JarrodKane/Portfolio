@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// Call to grab RSS feed
 export const makeCall = async () => {
   try {
     const resp = await axios.get(

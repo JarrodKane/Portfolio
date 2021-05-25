@@ -38,7 +38,7 @@ const Youtube = (props) => {
         )} */}
 
         <Textbox
-          text={`Here's my Youtube channel
+          text={`Youtube channel
        It's used mainly for making more informative videos about tech and the like.`}
         />
       </DefaultPage>

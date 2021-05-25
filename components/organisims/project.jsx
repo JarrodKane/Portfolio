@@ -6,8 +6,8 @@ import { Icon } from "../atoms/icon";
 
 function project({ title, text, imageRef, githubRef, linkRef }) {
   return (
-    <div className="max-w-screen-lg bg-white rounded-xl shadow-md overflow-hidden   mx-5 my-4  lg:my-6">
-      <div className="md:flex">
+    <div className="max-w-screen-xlg bg-white rounded-xl shadow-md overflow-hidden mx-5 my-4 lg:my-6">
+      <div className="flex max-w-6xl flex-col md:flex-row">
         <div className="md:flex-shrink-0">
           <img
             className="h-72  w-full object-cover  md:w-72"
@@ -15,20 +15,20 @@ function project({ title, text, imageRef, githubRef, linkRef }) {
             alt="Man looking at item at a store"
           />
         </div>
-        <div className="p-8 pb-0">
+        <div className="md:p-8 p-3 pb-0 w-full">
           <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
             {title}
           </div>
-          <p className="mt-2 text-gray-500">{text}</p>
+          <p className="mt-2 mb-2 text-gray-500 whitespace-pre-line">{text}</p>
         </div>
-        <div className="w-2/4 flex p-4 justify-around">
+        <div className=" flex p-3   md:flex-col flex-row ">
           <Icon
-            props={`h-16 w-16 p-2 flex `}
+            props={`h-16 w-16 p-2 m-5 `}
             imageFile="/images/github.svg"
             linkRef={`${githubRef}`}
           />
           <Icon
-            props={`h-16 w-16 p-2`}
+            props={`h-16 w-16 p-2  m-5`}
             imageFile="/images/website.svg"
             linkRef={`${linkRef}`}
           />

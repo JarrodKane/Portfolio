@@ -38,7 +38,7 @@ const Twitch = (props) => {
         )} */}
 
         <Textbox
-          text={`Here's my twitch channel
+          text={`Twitch channel
         It's used mainly for live programming/designing
         
         Sometimes the odd game will be played as well, but normally it's just me getting confused and worried about whey something is not working`}
