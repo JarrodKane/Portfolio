@@ -26,7 +26,9 @@ function PodcastCard({ title, date, url, num, id, body }) {
         >
           {title}
         </div>
-        <div className={`max-h-28 max-w-2xl overflow-hidden mb-3`}>
+        <div
+          className={`max-h-28 max-w-2xl overflow-ellipsis overflow-hidden mb-3`}
+        >
           {parse(body)}
         </div>
         <audio controls className={`w-full rounded-xl`}>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import DefaultPage from "../../components/templates/defaultPage";
 import PodcastCard from "../../components/organisims/podcastCard";
 import { makeCall } from "../../api/pinecast";
+import next from "next";
 
 export const getStaticProps = async () => {
   const res = await makeCall();
@@ -34,14 +35,31 @@ const Podcast = ({ episodes }) => {
   // TODO: Change pagination into it's own component and make it so only x number of page numbers are displayed at once then it get's a ... eventually if there are too many
   const onChangePage = (value) => {
     let curPages = pages;
+    console.log(totalPages);
 
-    console.log(value);
+    let currentPage = pageNum;
+    let nextPage;
+    if (value === "up") {
+      {
+        currentPage + 1 >= totalPages.length - 1
+          ? (nextPage = totalPages.length - 1)
+          : (nextPage = currentPage + 1);
+      }
+    } else if (value === "down") {
+      {
+        currentPage - 1 < 0 ? (nextPage = 0) : (nextPage = currentPage - 1);
+      }
+    } else {
+      nextPage = value;
+    }
+
     if (value === 0) {
       curPages = [0, 10];
     } else {
-      curPages = [10 * value, 10 * value + 10];
+      curPages = [10 * nextPage, 10 * nextPage + 10];
     }
 
+    setPageNum(nextPage);
     setPages(curPages);
   };
 
@@ -62,16 +80,16 @@ const Podcast = ({ episodes }) => {
         className={`pb-3 w-1/5 flex justify-around content-between items-baseline`}
       >
         <div
-          className={`pt-7 text-3xl`}
+          className={`pt-7 text-3xl cursor-pointer`}
           onClick={() => {
-            onChangePage(1);
+            onChangePage("down");
           }}
         >
           {`<`}
         </div>
         {totalPages.map((number) => (
           <div
-            className={`w-auto h-7 text-3xl   cursor-pointer`}
+            className={`w-auto h-7 text-3xl cursor-pointer`}
             onClick={() => {
               onChangePage(number);
             }}
@@ -80,9 +98,9 @@ const Podcast = ({ episodes }) => {
           </div>
         ))}
         <div
-          className={`pt-7 text-3xl`}
+          className={`pt-7 text-3xl cursor-pointer`}
           onClick={() => {
-            onChangePage(1);
+            onChangePage("up");
           }}
         >
           {`>`}
