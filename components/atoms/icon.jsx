@@ -9,7 +9,7 @@ export const Icon = ({ imageFile, linkRef, props }) => {
     <a href={`${linkRef}`} rel="noopener" target="_blank">
       <div
         type="icon"
-        className={`flex bg-gray-300 rounded-lg shadow-xl hover:bg-red-500 cursor-pointer  transition duration-300 ease-in-out  ${props}`}
+        className={`flex  bg-gray-300 rounded-lg shadow-xl hover:bg-red-500 cursor-pointer  transition duration-300 ease-in-out  ${props}`}
       >
         <img src={imageFile}></img>
       </div>

@@ -7,50 +7,31 @@ import Image from "next/image";
 
 function project({ title, text, imageRef, githubRef, linkRef }) {
   return (
-    <div className=" overflow-hidden bg-white rounded-xl shadow-md flex  flex-col md:flex-row">
+    // <div className=" grid grid-col-3  overflow-hidden bg-white rounded-xl shadow-md flex flex-col md:flex-row m-5">
+    <div className=" grid md:grid-cols-5 max-w-screen-xl bg-white rounded-xl shadow-md my-5 md:my-5">
       <div
         type={imageRef}
-        className={`w-full h-60 bg-profile-image bg-cover bg-center  rounded-r-lg  shadow-md  flex items-end  p-5  `}
+        className={`col-span-2 h-52 md:h-full bg-${imageRef} bg-cover bg-center  md:rounded-l-lg  rounded-t-lg shadow-md  flex items-end  p-5  `}
       />
-      <div className="">
+      <div className="p-3 md:col-span-3">
         <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
           {title}
         </div>
-        <div className=" text-gray-500 overflow-hidden">{text}</div>
+        <div className="text-gray-500 mt-2">{text}</div>
+        <div className=" flex p-3">
+          <Icon
+            props={`w-16 p-2 mx-3`}
+            imageFile="/images/github.svg"
+            linkRef={`${githubRef}`}
+          />
+          <Icon
+            props={`w-16 p-2  mx-3`}
+            imageFile="/images/website.svg"
+            linkRef={`${linkRef}`}
+          />
+        </div>
       </div>
     </div>
-
-    // <div className=" bg-white rounded-xl shadow-md ">
-    //   <div className="flex  flex-col md:flex-row">
-    //     <div className="md:flex-shrink-0">
-    //       <Image
-    //         className="object-cover  "
-    //         src={`/images/${imageRef}`}
-    //         height="260"
-    //         width="260"
-    //         alt="Man looking at item at a store"
-    //       />
-    //     </div>
-    //     <div className="">
-    //       <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-    //         {title}
-    //       </div>
-    //       <p className="mt-2 mb-2 text-gray-500">{text}</p>
-    //     </div>
-    //     <div className=" flex p-3   md:flex-col flex-row ">
-    //       <Icon
-    //         props={`h-16 w-16 p-2 m-5 `}
-    //         imageFile="/images/github.svg"
-    //         linkRef={`${githubRef}`}
-    //       />
-    //       <Icon
-    //         props={`h-16 w-16 p-2  m-5`}
-    //         imageFile="/images/website.svg"
-    //         linkRef={`${linkRef}`}
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
