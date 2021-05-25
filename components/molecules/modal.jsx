@@ -3,8 +3,8 @@ import React from "react";
 const Modal = ({ isOpen, children }) => {
   return (
     <div
-      className={`modal bg-red-500  h-screen opacity-95 fixed w-full left-0    overflow-hidden  origin-top top-14  duration-300 scale-y-0 z-30 ${
-        isOpen ? "" : "transform"
+      className={`modal bg-red-500 h-screen opacity-95 fixed w-full left-0 overflow-hidden origin-top top-14  duration-300 scale-y-0 z-30  transform${
+        isOpen ? "transform" : ""
       }`}
     >
       {/* Needed a negative margin to account for the navigation bar at the top */}
