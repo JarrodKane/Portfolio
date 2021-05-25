@@ -54,7 +54,7 @@ export default function Home() {
           title="Chaos-TODO"
           text={`A basic todo list that was made while streaming live. It has sounds and was made to create a slightly more interesting todolist
           - React hooks, styled componets, react-beautiful-dnd`}
-          imageRef="test.jpg"
+          imageRef="chaos.png"
           linkRef="https://gracious-brahmagupta-942870.netlify.app/"
           githubRef="https://github.com/JarrodKane/Chaos-TODO"
         />
