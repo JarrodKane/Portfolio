@@ -1,6 +1,6 @@
 # Next.js portfolio
 
-LIVE VERSION [https://jarrodsite.netlify.app/](https://jarrodsite.com/).
+LIVE VERSION [https://jarrodkane.com/](https://jarrodkane.com/).
 
 Objective of this project is to use Next.js to create my own portfolio.
 The Home page is meant to hold multiple sections, and the only other pages are Blog/Twitch/Youtube.
