@@ -25,6 +25,7 @@ module.exports = {
     extend: { transform: ["hover", "focus"] },
   },
   plugins: [
+    require("@tailwindcss/line-clamp"),
     plugin(function ({ addVariant, e, postcss }) {
       addVariant("firefox", ({ container, separator }) => {
         const isFirefoxRule = postcss.atRule({

@@ -14,30 +14,19 @@ const Youtube = (props) => {
         <title>Youtube</title>
       </Head>
       <DefaultPage props={` flex-col items-center  `}>
-        <div className={`w-screen p-12`}>
+        <div className={`w-screen p-12 flex justify-center`}>
           <ReactPlayer
             key={uuidv4()}
             playerId={uuidv4()}
-            className={`react-player`}
+            className={`max-w-5xl`}
             url="https://youtu.be/f8hk3hX1ZHc"
             width="100%"
             height="50vh"
           />
         </div>
 
-        {/* {width === 0 ? (
-          <div>Loading</div>
-        ) : (
-          <TwitchEmbed
-            key={uuidv4()}
-            targetID="twitch-embed"
-            width={width}
-            height={height - 200}
-            channel="GrimeGoblin"
-          />
-        )} */}
-
         <Textbox
+          props={`max-w-3xl`}
           text={`Youtube channel
        It's used mainly for making more informative videos about tech and the like.`}
         />

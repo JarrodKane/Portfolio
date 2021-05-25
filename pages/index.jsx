@@ -15,6 +15,7 @@ export default function Home() {
       <ProfileImage />
       <div className={`w-full flex justify-center`}>
         <Textbox
+          props={`max-w-4xl`}
           text={`I’m a developer from Melbourne Australia. 
           I focus mainly on technologies/frameworks/languages such as React, Next.js, Node, etc...
 

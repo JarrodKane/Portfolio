@@ -14,30 +14,19 @@ const Twitch = (props) => {
         <title>Twitch Channel</title>
       </Head>
       <DefaultPage props={` flex-col items-center  `}>
-        <div className={`w-screen p-12`}>
+        <div className={`w-screen p-12 flex justify-center`}>
           <ReactPlayer
             key={uuidv4()}
             playerId={uuidv4()}
-            className="react-player"
+            className={`max-w-5xl`}
             url="https://www.twitch.tv/grimegoblin"
             width="100%"
             height="50vh"
           />
         </div>
 
-        {/* {width === 0 ? (
-          <div>Loading</div>
-        ) : (
-          <TwitchEmbed
-            key={uuidv4()}
-            targetID="twitch-embed"
-            width={width}
-            height={height - 200}
-            channel="GrimeGoblin"
-          />
-        )} */}
-
         <Textbox
+          props={`max-w-3xl`}
           text={`Twitch channel
         It's used mainly for live programming/designing
         

@@ -18,17 +18,18 @@ function PodcastCard({ title, date, url, num, id, body }) {
   return (
     //
 
-    <div
-      onClick={handleClick}
-      className="md:w-4/6 w-5/6 h-auto bg-white rounded-xl transition-shadow duration-500 ease-in-out shadow-md hover:shadow-xl overflow-hidden mx-5 my-4 flex justify-end cursor-pointer "
-    >
-      <div className="w-full md:p-8 p-2 pb-0">
-        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+    <div className=" max-w-5xl bg-white rounded-xl transition-all duration-500 ease-in-out shadow-md hover:shadow-xl hover:bg-yellow-100 overflow-hidden mx-5 my-4 flex justify-end ">
+      <div className="w-full md:p-5 p-2">
+        <div
+          onClick={handleClick}
+          className="uppercase tracking-wide text-xl text-indigo-500 font-semibold cursor-pointer"
+        >
           {title}
         </div>
-        {parse(body)}
-        {/* <p className="mt-2 text-gray-500">{excerpt}</p> */}
-        <audio controls className="flex  w-full">
+        <div className={`max-h-28 max-w-2xl overflow-hidden mb-3`}>
+          {parse(body)}
+        </div>
+        <audio controls className={`w-full rounded-xl`}>
           <source src={url} type="audio/mpeg" />
         </audio>
       </div>
