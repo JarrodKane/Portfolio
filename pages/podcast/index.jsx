@@ -4,7 +4,6 @@ import DefaultPage from "../../components/templates/defaultPage";
 import PodcastCard from "../../components/organisims/podcastCard";
 import { makeCall } from "../../api/pinecast";
 import QuickAccess from "../../components/molecules/quickAccess";
-import next from "next";
 
 export const getStaticProps = async () => {
   const res = await makeCall();
