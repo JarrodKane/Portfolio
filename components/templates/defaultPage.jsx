@@ -5,7 +5,7 @@ import { color_background } from "../../constants/colors";
 
 export default function DefaultPage({ children, props }) {
   return (
-    <div className={` bg-gray-100 min-h-screen overflow-hidden`}>
+    <div className={` bg-gray-100 min-h-screen w-full`}>
       <Navigation />
       <div className={`${props} `}>{children}</div>
       <BackToTop />

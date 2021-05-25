@@ -14,6 +14,9 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "profile-image": "url('/images/profile.jpg')",
+        "portfolio-image": "url('/images/blogSite.png')",
+        "chaos-image": "url('/images/chaos.png')",
+        "piggy-image": "url('/images/littlePiggy.png')",
         "404-image": "url('/images/nic404.jpg')",
       }),
       fontFamily: {
