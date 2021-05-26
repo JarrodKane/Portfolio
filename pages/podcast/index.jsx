@@ -62,7 +62,7 @@ const Podcast = ({ episodes }) => {
 
   return (
     <DefaultPage props="flex flex-row justify-start ">
-      <div className={`pl-5 md:w-3/12 lg:block hidden`}>
+      <div className={`pl-5 pt-7 md:w-3/12 lg:block hidden`}>
         <QuickAccess list={episodes} />
       </div>
       <div className={`flex md:max-w-5xl max-w-3xl flex-col items-start `}>

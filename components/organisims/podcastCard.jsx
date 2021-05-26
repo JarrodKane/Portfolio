@@ -20,11 +20,11 @@ function PodcastCard({ title, date, url, num, id, body }) {
       <div className=" md:p-5 p-2">
         <div
           onClick={handleClick}
-          className="uppercase tracking-wide text-xl text-indigo-500 font-semibold cursor-pointer"
+          className="uppercase tracking-wide text-xl text-indigo-500 hover:text-indigo-700 font-semibold cursor-pointer"
         >
           {title}
         </div>
-        <div className={`max-h-28 overflow-ellipsis overflow-hidden mb-3`}>
+        <div className={`max-h-28 overflow-ellipsis overflow-hidden mb-3 `}>
           {parse(body)}
         </div>
         <audio controls className={`w-full rounded-xl`}>

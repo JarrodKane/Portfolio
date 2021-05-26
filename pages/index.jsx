@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <DefaultPage props="flex-col">
       <ProfileImage />
-      <div className={`w-full flex flex-col  p-3 md:p-8 items-center `}>
+      <div className={`w-full flex flex-col p-3 md:p-8 items-center `}>
         <Textbox
           text={`I’m a developer from Melbourne Australia. 
           I focus mainly on technologies/frameworks/languages such as React, Next.js, Node, etc...
