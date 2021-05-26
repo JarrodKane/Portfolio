@@ -19,33 +19,34 @@ const QuickAccess = ({ list, props }) => {
   return (
     <>
       <button
-        className={`
-    transition duration-500 ease-in-out
-    border-2 border-yellow-600 rounded-lg px-3 py-2 text-red-800 cursor-pointer  hover:bg-yellow-600 hover:text-gray-100 text-xl `}
+        className={`w-full mb-4 transition duration-500 ease-in-out border-2 border-yellow-600 rounded-lg px-3 py-2 text-red-800 cursor-pointer  hover:bg-yellow-600 hover:text-gray-100 text-xl `}
         onClick={handleQuickAccess}
       >
         Quick Access
       </button>
-      <div className={`${isQuickOpen ? "block" : "hidden"} `}>
-        <div className={`${props} `}>
-          {list.map((episode, i) => (
-            <div
-              className={`hover:text-indigo-500 cursor-pointer text-green-500 `}
-              onClick={() => {
-                handleClick(episode.title);
-              }}
-              key={episode.id}
-              id={episode.id}
-              title={episode.title}
-              body={episode.content_html}
-              date={episode.date_published}
-              url={episode.attachments[0].url}
-              num={i}
-            >
-              {episode.title}
-            </div>
-          ))}
-        </div>
+
+      <div
+        className={`flex items-start flex-col ${
+          isQuickOpen ? "inline-flex flex-col" : "hidden"
+        }`}
+      >
+        {list.map((episode, i) => (
+          <div
+            className={`hover:text-indigo-500 cursor-pointer text-green-500 `}
+            onClick={() => {
+              handleClick(episode.title);
+            }}
+            key={episode.id}
+            id={episode.id}
+            title={episode.title}
+            body={episode.content_html}
+            date={episode.date_published}
+            url={episode.attachments[0].url}
+            num={i}
+          >
+            {episode.title}
+          </div>
+        ))}
       </div>
     </>
   );

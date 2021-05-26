@@ -63,11 +63,13 @@ const Podcast = ({ episodes }) => {
   };
 
   return (
-    <DefaultPage props="flex flex-row justify-start ">
-      <div className={`pl-5 pt-7 md:w-3/12 lg:block hidden`}>
+    <DefaultPage props="grid grid-cols-9 ">
+      <div className={`col-span-2 pl-5 pt-7  lg:block hidden`}>
         <QuickAccess list={episodes} />
       </div>
-      <div className={`flex md:max-w-5xl max-w-3xl flex-col items-start `}>
+      <div
+        className={`col-span-9 lg:col-span-7 flex md:max-w-5xl max-w-3xl flex-col items-start `}
+      >
         <div className={`flex flex-col items-center`}>
           {podcastList.map((episode, i) => (
             <PodcastCard
