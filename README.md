@@ -12,7 +12,7 @@ The main reason behind this project is to try and use Tailwindcss.
 The basic design for this site is made in [Figma](https://www.figma.com/file/wLqVYuYcdFWoMFCHxxqA1c/JarrodKane?node-id=1%3A982).
 The structure of this project is using atomic design.
 The stying is using Tailwindcss, I was going to used styled-components but decided to try something different.
-Prototyping was done using Storybook.
+Some prototyping was done using Storybook but has now been removed from the project.
 
 This is using:
 
@@ -21,7 +21,7 @@ This is using:
 - [Contentful](https://www.contentful.com/) (Blog CMS)
 - [Pinecast](https://pinecast.com) (Podcast hosting)
 - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-- [Storybook](https://storybook.js.org/)
+~~[Storybook](https://storybook.js.org/)~~
 
 ---
 

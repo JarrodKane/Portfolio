@@ -10,14 +10,17 @@ const Navigation = () => {
 
   const handleOpen = () => {
     const curModal = isOpen;
+    setIsOpen(!curModal);
+  };
+
+  useEffect(() => {
+    const curModal = isOpen;
     if (!curModal) {
       document.body.style.overflow = "unset";
     } else {
       document.body.style.overflow = "hidden";
     }
-
-    setIsOpen(!curModal);
-  };
+  }, [isOpen]);
 
   return (
     <div
