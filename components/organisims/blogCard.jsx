@@ -44,7 +44,7 @@ function BlogCard({
           className="md:w-4/6 w-5/6 h-60 bg-white rounded-xl transition-shadow duration-500 ease-in-out shadow-md hover:shadow-xl overflow-hidden mx-5 my-4 flex justify-end cursor-pointer "
         >
           <div className="flex w-1/2">
-            <Image
+            <img
               className={`object-cover  transition-filter duration-500 ease-in-out   ${
                 isHoverd ? "" : " filter grayscale"
               }`}
@@ -76,7 +76,7 @@ function BlogCard({
             <p className="mt-2 text-gray-500">{excerpt}</p>
           </div>
           <div className="flex w-1/2">
-            <Image
+            <img
               className={`object-cover  transition-filter duration-500 ease-in-out   ${
                 isHoverd ? "" : " filter grayscale"
               }`}

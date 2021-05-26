@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 const BlogContent = ({ children, ...props }) => {
   return (
     <div className={`flex flex-col max-w-5xl    justify-center items-center `}>
-      <Image
+      <img
         src={`https://${props.thumbNail.fields.file.url}`}
         width={props.thumbNail.fields.file.details.image.width}
         height={props.thumbNail.fields.file.details.image.height}
