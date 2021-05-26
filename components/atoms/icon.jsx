@@ -6,13 +6,15 @@ import PropTypes from "prop-types";
  */
 export const Icon = ({ imageFile, linkRef, props }) => {
   return (
-    <a href={`${linkRef}`} rel="noopener" target="_blank">
-      <div
-        type="icon"
-        className={`flex  bg-gray-300 rounded-lg shadow-xl hover:bg-red-500 cursor-pointer  transition duration-300 ease-in-out  ${props}`}
-      >
-        <img src={imageFile}></img>
-      </div>
+    <a
+      href={`${linkRef}`}
+      rel="noopener"
+      target="_blank"
+      className={` bg-blue-900`}
+      type="icon"
+      className={`flex rounded-lg shadow-xl hover:bg-indigo-400 cursor-pointer  transition duration-300 ease-in-out ${props}`}
+    >
+      <img src={imageFile}></img>
     </a>
   );
 };

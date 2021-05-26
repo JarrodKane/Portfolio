@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import Textbox from "../molecules/textbox";
-import Row from "../molecules/row";
-import { Icon } from "../atoms/icon";
-
 function BlogCard({
   title,
   excerpt,
@@ -53,7 +49,7 @@ function BlogCard({
                 isHoverd ? "" : " filter grayscale"
               }`}
               src={thumbNailUrl}
-              width={700}
+              width={400}
               height={400}
               alt="Man looking at item at a store"
             />

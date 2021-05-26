@@ -10,26 +10,20 @@ const Navigation = () => {
 
   const handleOpen = () => {
     const curModal = isOpen;
-    setIsOpen(!curModal);
-  };
-
-  // This is setting the overflow to being hidden when the modal is up.
-  // It makes it look more clean and avoids you from scrolling by accident and losing your place on the page
-  useEffect(() => {
-    const curModal = isOpen;
-
     if (!curModal) {
       document.body.style.overflow = "unset";
     } else {
       document.body.style.overflow = "hidden";
     }
-  }, [isOpen]);
+
+    setIsOpen(!curModal);
+  };
 
   return (
-    <nav
+    <div
       className={`sticky top-0 z-10  flex h-14 bg-gray-500  shadow-md justify-end  backdrop-filter backdrop-blur-lg  border-b border-gray-200 bg-opacity-30 firefox:bg-opacity-90 ${
         browser.name === "firefox"
-          ? "bg-opacity-90 border-gray-300 bg-gray-500 "
+          ? "bg-opacity-90 border-gray-300 bg-gray-500"
           : ""
       }`}
     >
@@ -98,7 +92,7 @@ const Navigation = () => {
           </g>
         </svg>
       </div>
-    </nav>
+    </div>
   );
 };
 

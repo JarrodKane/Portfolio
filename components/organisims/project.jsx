@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function project({ title, text, imageRef, githubRef, linkRef }) {
   return (
-    <div className=" grid md:grid-cols-6 md:w-10/12  max-w-screen-lg bg-white rounded-xl shadow-md my-5 md:my-5">
+    <div className=" grid md:grid-cols-6 md:w-10/12  max-w-screen-lg bg-white rounded-xl shadow-md my-5 ">
       <div
         type={imageRef}
         className={`col-span-2 h-52 md:h-full bg-${imageRef} bg-cover bg-center  md:rounded-l-lg  rounded-t-lg shadow-md  flex items-end  p-5  `}
@@ -21,12 +21,12 @@ function project({ title, text, imageRef, githubRef, linkRef }) {
         </p>
         <div className=" flex p-3">
           <Icon
-            props={`w-16 p-2 mx-3`}
+            props={`w-16 p-2 mx-3 bg-gray-300`}
             imageFile="/images/github.svg"
             linkRef={`${githubRef}`}
           />
           <Icon
-            props={`w-16 p-2  mx-3`}
+            props={`w-16 p-2  mx-3 bg-gray-300`}
             imageFile="/images/website.svg"
             linkRef={`${linkRef}`}
           />

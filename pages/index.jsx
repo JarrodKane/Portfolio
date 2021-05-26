@@ -14,11 +14,14 @@ export default function Home() {
       <ProfileImage />
       <div className={`w-full flex flex-col p-3 md:p-8 items-center `}>
         <Textbox
+          linkRef="https://www.linkedin.com/in/jarrodkane/"
+          imageFile="/images/linkedin.svg"
           text={`I’m a developer from Melbourne Australia. 
           I focus mainly on technologies/frameworks/languages such as React, Next.js, Node, etc...
 
           
-          My other hobbies include MMA, BJJ, and bad movies which can also be found on this site`}
+          My other hobbies include MMA, BJJ, and bad movies which can also be found on this site.
+          This site was made in order to try out many new technologies and a link to the repo can be found bellow.`}
         ></Textbox>
 
         <Project
@@ -30,14 +33,16 @@ export default function Home() {
           The content for the Podcast is grabbed from the podcasts RSS feed and then the pages are dynamically generated.
           
 
-          The aim of this site was to create a blog that would get content from Contentful, and was to try to use Tailwindcss`}
+          The original aim of this site was to create a blog that would get content from Contentful, and was to try to use Tailwindcss.
+          It now grabs content from Contentful, an RSS feed, and embeds livestreamed videos.
+          Check out the github for a full list of todos and technology used.`}
           imageRef="portfolio-image"
           githubRef="https://github.com/JarrodKane/Portfolio"
           linkRef="https://jarrodkane.com/"
         />
         <Project
           title="Little Piggy"
-          text={`Little Piggy is based off the Pig Dice Game.
+          text={`Little Piggy is based off "The Pig Dice Game".
 
           It was created when I was learning React Hooks, styled-components, and Framer-motion.
           It's hosted on netlify`}
@@ -47,7 +52,8 @@ export default function Home() {
         />
         <Project
           title="Chaos-TODO"
-          text={`A basic todo list that was made while streaming live. It has sounds and was made to create a slightly more interesting todolist
+          text={`A basic todo list that was made while streaming live.
+          It has sounds and was made to create a slightly more interesting todolist.
           - React hooks, styled componets, react-beautiful-dnd`}
           imageRef="chaos-image"
           linkRef="https://gracious-brahmagupta-942870.netlify.app/"

@@ -30,6 +30,8 @@ const Podcast = ({ episodes }) => {
     totalPages.push(i);
   }
 
+  // Controling what page the user is in
+  // TODO: Change this out into its own component so it can be used again in blog
   const onChangePage = (value) => {
     let curPages = pages;
     console.log(totalPages);
