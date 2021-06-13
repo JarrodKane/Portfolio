@@ -25,6 +25,21 @@ export default function Home() {
         ></Textbox>
 
         <Project
+          title="Podcast Site"
+          text={`Cool podcast site created using Next.js, Tailwindscss, TypeScript, Cypress  
+          The site is deployed on Vercel.
+          
+         The site uses static site generation to create out all the pages on build. It grabs an RSS feed from Pinecast to create out all of the seperate episode pages.
+         
+         I created this site as I was wanting to try out TypeScript, learn testing, and have a nice looking site for my podcast.
+
+         Eventually I would like to build this project into something bigger where I can use it as a template for others using pinecast to host their own site.`}
+          imageRef="endOfTheReel.png"
+          githubRef="https://github.com/JarrodKane/end-of-the-reel"
+          linkRef="https://endofthereel.com/"
+        />
+
+        <Project
           title="Portfolio Site"
           text={`Site created with Next.js.
           It's using tailwindscss for styling.
